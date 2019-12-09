@@ -1,0 +1,23 @@
+﻿@inject IViewLocalizer viewLocalizer
+@inject IStringLocalizer<Button> sharedLocalizer
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h2>Resource Test</h2>
+    <label for="view">View Resources</label>
+    <div id="view">
+        Company:@viewLocalizer["company"]
+    </div>
+    <hr />
+    <label for="shared">Shared Resources</label>
+    <div id="shared">
+        close:@sharedLocalizer["close"] <br />
+        ok:@sharedLocalizer["ok"] <br />
+        cancel:@sharedLocalizer["cancel"] <br />
+    </div>
+</div>
